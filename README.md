@@ -1,29 +1,34 @@
+Hier ist ein vollständiger Vorschlag für eine `README.md`-Datei deines Projekts **YOLOv5 Objekterkennung mit dem SkyFusion-Datensatz**, basierend auf den Informationen aus deiner Präsentation und deinen Python-Skripten:
 
 ---
 
+```markdown
+# 🛰️ YOLOv5 Objekterkennung auf dem SkyFusion-Datensatz
+
+**Autorin**: Tanja Koschevnikov  
+**Projektziel**: Tiny Object Detection auf Satellitenbildern mit YOLOv5
+
+---
+
+## 📁 Projektübersicht
+
+Dieses Projekt verwendet den **SkyFusion-Datensatz** (ein Subset von AI-TOD v2 und Airbus Aircraft Detection), um ein YOLOv5-Modell für die Erkennung von Objekten wie Flugzeuge, Schiffe und Fahrzeuge zu trainieren.  
+Die Annotationen lagen ursprünglich im **COCO-Format** vor und wurden mit **pylabel** in das **YOLO-Format** konvertiert.
+
+---
+
+## 🛠️ Verwendete Tools & Umgebung
+
+- **YOLOv5** (Ultralytics, PyTorch-basiert)
+- **Kaggle Notebook** mit 2x NVIDIA T4 GPUs
+- **Spyder IDE** für lokale Datenkonvertierung
+- **Python-Bibliotheken**: `pandas`, `pylabel`, `matplotlib`, `json`, `shutil`
+
+---
 
 ## 🗂️ Projektstruktur
-Du kannst sogar ` ```bash ` oder ` ```text ` schreiben, z. B.:
 
-<pre>
-```text
-skyfusion_yolo/
-├── train/
-│   ├── images/
-│   └── labels/
-├── valid/
-│   ├── images/
-│   └── labels/
-└── test/
-    ├── images/
-    └── labels/
 ```
-
-
----
-
-Wenn du möchtest, kann ich dir deine gesamte `README.md` gleich fertig als Datei senden – oder sogar in einem GitHub-kompatiblen ZIP-Projektordner zusammenstellen. Sag Bescheid.
-
 
 skyfusion\_yolo/
 ├── train/
@@ -39,7 +44,7 @@ skyfusion\_yolo/
 ````
 
 ---
-````
+
 ## 📦 Datenvorverarbeitung
 
 Die COCO-Annotationen werden mit dem Skript [`V2_yolo.py`](./V2_yolo.py) in das YOLO-Format überführt. Dies umfasst:
@@ -49,12 +54,13 @@ Die COCO-Annotationen werden mit dem Skript [`V2_yolo.py`](./V2_yolo.py) in das 
 - **Normalisierung** der Bounding Boxes
 - **Export** der YOLO-Annotationen und Bilder in die Verzeichnisstruktur
 
-
+```python
+# Beispiel: YOLO-Annotation
 class_id x_center y_center width height
 ````
 
 ---
-````
+
 ## 🧠 Modelltraining
 
 Das Training erfolgt auf **Kaggle**, basierend auf YOLOv5s mit:
@@ -125,5 +131,7 @@ plt.plot(df['metrics/recall'], label='Recall')
 
 ```
 
+---
 
+Möchtest du eine `.md`-Datei exportiert bekommen? Ich kann sie dir direkt als Datei erstellen.
 ```
