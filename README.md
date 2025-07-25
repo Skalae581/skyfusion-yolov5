@@ -1,4 +1,3 @@
-# skyfusion-yolov5
 Hier ist ein vollständiger Vorschlag für eine `README.md`-Datei deines Projekts **YOLOv5 Objekterkennung mit dem SkyFusion-Datensatz**, basierend auf den Informationen aus deiner Präsentation und deinen Python-Skripten:
 
 ---
@@ -132,7 +131,5 @@ plt.plot(df['metrics/recall'], label='Recall')
 
 ```
 
----
 
-Möchtest du eine `.md`-Datei exportiert bekommen? Ich kann sie dir direkt als Datei erstellen.
 ```
