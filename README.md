@@ -1,34 +1,57 @@
-Hier ist ein vollständiger Vorschlag für eine `README.md`-Datei deines Projekts **YOLOv5 Objekterkennung mit dem SkyFusion-Datensatz**, basierend auf den Informationen aus deiner Präsentation und deinen Python-Skripten:
+Du hast absolut recht – in deiner Markdown-Datei wird der Block unter `## 🗂️ Projektstruktur` **nicht weiter angezeigt oder korrekt gerendert**, weil **nach dem Titel keine formatierte Codeblock-Umgebung (` ``` `)** folgt.
 
 ---
+
+## ✅ Lösung: Verwende korrekt formatierten Codeblock mit ` ``` `
+
+So sollte der Abschnitt korrekt aussehen:
 
 ```markdown
-# 🛰️ YOLOv5 Objekterkennung auf dem SkyFusion-Datensatz
-
-**Autorin**: Tanja Koschevnikov  
-**Projektziel**: Tiny Object Detection auf Satellitenbildern mit YOLOv5
-
----
-
-## 📁 Projektübersicht
-
-Dieses Projekt verwendet den **SkyFusion-Datensatz** (ein Subset von AI-TOD v2 und Airbus Aircraft Detection), um ein YOLOv5-Modell für die Erkennung von Objekten wie Flugzeuge, Schiffe und Fahrzeuge zu trainieren.  
-Die Annotationen lagen ursprünglich im **COCO-Format** vor und wurden mit **pylabel** in das **YOLO-Format** konvertiert.
-
----
-
-## 🛠️ Verwendete Tools & Umgebung
-
-- **YOLOv5** (Ultralytics, PyTorch-basiert)
-- **Kaggle Notebook** mit 2x NVIDIA T4 GPUs
-- **Spyder IDE** für lokale Datenkonvertierung
-- **Python-Bibliotheken**: `pandas`, `pylabel`, `matplotlib`, `json`, `shutil`
-
----
-
 ## 🗂️ Projektstruktur
 
 ```
+
+skyfusion\_yolo/
+├── train/
+│   ├── images/
+│   └── labels/
+├── valid/
+│   ├── images/
+│   └── labels/
+└── test/
+├── images/
+└── labels/
+
+```
+```
+
+> Achte darauf, dass du oben und unten **drei Backticks (` ``` `)** verwendest, **nicht einfache Anführungszeichen oder nur einen Slash.**
+
+---
+
+### ✳️ Alternativ: Mit Dateityp für Syntaxhighlighting
+
+Du kannst sogar ` ```bash ` oder ` ```text ` schreiben, z. B.:
+
+<pre>
+```text
+skyfusion_yolo/
+├── train/
+│   ├── images/
+│   └── labels/
+├── valid/
+│   ├── images/
+│   └── labels/
+└── test/
+    ├── images/
+    └── labels/
+```
+</pre>
+
+---
+
+Wenn du möchtest, kann ich dir deine gesamte `README.md` gleich fertig als Datei senden – oder sogar in einem GitHub-kompatiblen ZIP-Projektordner zusammenstellen. Sag Bescheid.
+
 
 skyfusion\_yolo/
 ├── train/
