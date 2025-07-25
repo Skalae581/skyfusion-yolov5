@@ -1,36 +1,8 @@
-Du hast absolut recht – in deiner Markdown-Datei wird der Block unter `## 🗂️ Projektstruktur` **nicht weiter angezeigt oder korrekt gerendert**, weil **nach dem Titel keine formatierte Codeblock-Umgebung (` ``` `)** folgt.
 
 ---
 
-## ✅ Lösung: Verwende korrekt formatierten Codeblock mit ` ``` `
 
-So sollte der Abschnitt korrekt aussehen:
-
-```markdown
 ## 🗂️ Projektstruktur
-
-```
-
-skyfusion\_yolo/
-├── train/
-│   ├── images/
-│   └── labels/
-├── valid/
-│   ├── images/
-│   └── labels/
-└── test/
-├── images/
-└── labels/
-
-```
-```
-
-> Achte darauf, dass du oben und unten **drei Backticks (` ``` `)** verwendest, **nicht einfache Anführungszeichen oder nur einen Slash.**
-
----
-
-### ✳️ Alternativ: Mit Dateityp für Syntaxhighlighting
-
 Du kannst sogar ` ```bash ` oder ` ```text ` schreiben, z. B.:
 
 <pre>
@@ -46,7 +18,7 @@ skyfusion_yolo/
     ├── images/
     └── labels/
 ```
-</pre>
+
 
 ---
 
@@ -67,7 +39,7 @@ skyfusion\_yolo/
 ````
 
 ---
-
+````
 ## 📦 Datenvorverarbeitung
 
 Die COCO-Annotationen werden mit dem Skript [`V2_yolo.py`](./V2_yolo.py) in das YOLO-Format überführt. Dies umfasst:
@@ -77,13 +49,12 @@ Die COCO-Annotationen werden mit dem Skript [`V2_yolo.py`](./V2_yolo.py) in das 
 - **Normalisierung** der Bounding Boxes
 - **Export** der YOLO-Annotationen und Bilder in die Verzeichnisstruktur
 
-```python
-# Beispiel: YOLO-Annotation
+
 class_id x_center y_center width height
 ````
 
 ---
-
+````
 ## 🧠 Modelltraining
 
 Das Training erfolgt auf **Kaggle**, basierend auf YOLOv5s mit:
