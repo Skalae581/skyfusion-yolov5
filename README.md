@@ -1,8 +1,4 @@
 
-
----
-
-```markdown
 # 🛰️ YOLOv5 Objekterkennung auf dem SkyFusion-Datensatz
 
 **Autorin**: Tanja Koschevnikov  
@@ -25,23 +21,22 @@ Die Annotationen lagen ursprünglich im **COCO-Format** vor und wurden mit **pyl
 - **Python-Bibliotheken**: `pandas`, `pylabel`, `matplotlib`, `json`, `shutil`
 
 ---
-
+````
+````
 ## 🗂️ Projektstruktur
 
-```
+skyfusion_yolo/
+├── data/
+│   ├── train/
+│   └── valid/
+├── models/
+│   ├── yolov5s.pt
+│   └── yolov5s.yaml
+├── scripts/
+│   ├── train_yolo.py
+│   └── convert_labels.py
+└── README.md
 
-skyfusion\_yolo/
-├── train/
-│   ├── images/
-│   └── labels/
-├── valid/
-│   ├── images/
-│   └── labels/
-└── test/
-├── images/
-└── labels/
-
-````
 
 ---
 
@@ -54,9 +49,9 @@ Die COCO-Annotationen werden mit dem Skript [`V2_yolo.py`](./V2_yolo.py) in das 
 - **Normalisierung** der Bounding Boxes
 - **Export** der YOLO-Annotationen und Bilder in die Verzeichnisstruktur
 ---
-```python
+
 class_id x_center y_center width height
-````
+
 
 ---
 
