@@ -1,4 +1,4 @@
-Hier ist ein vollständiger Vorschlag für eine `README.md`-Datei deines Projekts **YOLOv5 Objekterkennung mit dem SkyFusion-Datensatz**, basierend auf den Informationen aus deiner Präsentation und deinen Python-Skripten:
+
 
 ---
 
@@ -53,9 +53,8 @@ Die COCO-Annotationen werden mit dem Skript [`V2_yolo.py`](./V2_yolo.py) in das 
 - **Umbenennen** der Spalten
 - **Normalisierung** der Bounding Boxes
 - **Export** der YOLO-Annotationen und Bilder in die Verzeichnisstruktur
-
+---
 ```python
-# Beispiel: YOLO-Annotation
 class_id x_center y_center width height
 ````
 
@@ -127,11 +126,7 @@ plt.plot(df['metrics/recall'], label='Recall')
 
 ---
 
-**Vielen Dank fürs Lesen!**
+
 
 ```
 
----
-
-Möchtest du eine `.md`-Datei exportiert bekommen? Ich kann sie dir direkt als Datei erstellen.
-```
